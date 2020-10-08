@@ -21,7 +21,8 @@ $(document).ready(function () {
         // ----------------------------------------------------------
         var numberofItems = $('.list-group-item').length;
         var limitPerPage = 4;
-        var totalPages = Math.round(numberofItems / limitPerPage);
+        // Roud to upper number
+        var totalPages = Math.ceil(numberofItems / limitPerPage);
 
         if(currentPage > 1) {
             $('#page .list-group-item').slice(limitPerPage * currentPage).hide(); // hide all elements after current page
@@ -81,7 +82,6 @@ $(document).ready(function () {
     $valider.click(function () {
         $task = $newtask.val();
         $tasks.push($task);
-        console.log($tasks);
         $state = $etat.val();
         $('#list-tasks').append('<li class="list-group-item"> <div class="d-flex justify-content-center align-items-center"> <div class="form-check"> <input class="form-check-input increase" type="checkbox" value="finished" id="defaultCheck1"> <label class="form-check-label" for="defaultCheck1"> </label> </div> <p></p> <span class="badge badge-primary">Normale</span> </div> </li>'),
             $('#list-tasks li:last p').text($task);
