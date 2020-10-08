@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <link rel="stylesheet" media="screen" type="text/css" href="./CSS/style.css" />
+    <link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+
+        <!--Title-->
+        <div class="row">
+            <div class="offset-5 col-md-3">
+                <h1>Todo List</h1>
+            </div>
+        </div>
+        <!--End title-->
+
+        <!--Todo-->
+        <div class="row todo">
+            <div id="page" class="offset-2 col-md-8">
+                <ul class="list-group list-group-flush rounded" id="list-tasks">
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input increase" type="checkbox" value="finished"
+                                    id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                </label>
+                            </div>
+                            <p>
+                                Tâche 1 : Boujour je suis un test
+                            </p>
+                            <span class="badge badge-primary">Normale</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input increase" type="checkbox" value="finished"
+                                    id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                </label>
+                            </div>
+                            <p>
+                                Tâche 2 : Boujour je suis un test super méga important de la mort qui tue
+                            </p>
+                            <span class="badge badge-danger">Urgente</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input increase" type="checkbox" value="finished"
+                                    id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                </label>
+                            </div>
+                            <p>
+                                Tâche 3 : Boujour je suis un test
+                            </p>
+                            <span class="badge badge-danger">Urgente</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input increase" type="checkbox" value="finished"
+                                    id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                </label>
+                            </div>
+                            <p>
+                                Tâche 4 : Boujour je suis un test
+                            </p>
+                            <span class="badge badge-primary">Normale</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input increase" type="checkbox" value="finished">
+                                <label class=" form-check-label" for="defaultCheck1">
+                                </label>
+                            </div>
+                            <p>
+                                Tâche 5 : Boujour je suis un test
+                            </p>
+                            <span class="badge badge-primary">Normale</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input increase" type="checkbox" value="finished"
+                                    id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                </label>
+                            </div>
+                            <p>
+                                Tâche 6 : Boujour je suis un test
+                            </p>
+                            <span class="badge badge-danger">Urgente</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input increase" type="checkbox" value="finished"
+                                    id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                </label>
+                            </div>
+                            <p>
+                                Tâche 7 : Boujour je suis un test
+                            </p>
+                            <span class="badge badge-danger">Urgente</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input increase" type="checkbox" value="finished"
+                                    id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                </label>
+                            </div>
+                            <p>
+                                Tâche 8 : Boujour je suis un test
+                            </p>
+                            <span class="badge badge-danger">Urgente</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input increase" type="checkbox" value="finished"
+                                    id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                </label>
+                            </div>
+                            <p>
+                                Tâche 9 : Boujour je suis un test
+                            </p>
+                            <span class="badge badge-danger">Urgente</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input increase" type="checkbox" value="finished"
+                                    id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                </label>
+                            </div>
+                            <p>
+                                Tâche 10 : Boujour je suis un test
+                            </p>
+                            <span class="badge badge-danger">Urgente</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input increase" type="checkbox" value="finished">
+                                <label class=" form-check-label" for="defaultCheck1">
+                                </label>
+                            </div>
+                            <p>
+                                Tâche 11 : Boujour je suis un test
+                            </p>
+                            <span class="badge badge-primary">Normale</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input increase" type="checkbox" value="finished"
+                                    id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                </label>
+                            </div>
+                            <p>
+                                Tâche 12 : Boujour je suis un test
+                            </p>
+                            <span class="badge badge-danger">Urgente</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input increase" type="checkbox" value="finished">
+                                <label class=" form-check-label" for="defaultCheck1">
+                                </label>
+                            </div>
+                            <p>
+                                Tâche 13 : Boujour je suis un test
+                            </p>
+                            <span class="badge badge-primary">Normale</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input increase" type="checkbox" value="finished"
+                                    id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                </label>
+                            </div>
+                            <p>
+                                Tâche 14 : Boujour je suis un test
+                            </p>
+                            <span class="badge badge-danger">Urgente</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!---End Todo-->
+
+        <!--Page-->
+        <div class="row">
+            <div class="offset-5 col-md-3 mt-3">
+                <nav aria-label="...">
+                    <ul class="pagination pagination-lg">
+                        <!-- <li class="page-item active current-page">
+                            <a class="page-link" href="javascript:void(0)" tabindex="-1">1</a>
+                        </li> -->
+                        <!-- <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                        </li> -->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!--End Page-->
+
+        <!--Button-->
+        <div class="row">
+            <button type="button" id="bouton" class="btn btn-dark offset-4 col-md-4 mt-3 mb-2" data-toggle="modal"
+                data-target="#exampleModal">
+                <span class="add">
+                    Ajouter une tâche
+                </span>
+            </button>
+        </div>
+        <!--End Button-->
+
+        <!--Boîte de dialogue pour créer une nouvelle tâche-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Nouvelle tâche</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="myform" method="get" action="index.html" class="needs-validation" novalidate>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Entrez votre tâche ici :</label>
+                                <textarea class="form-control" id="newtache" rows="3" required name="task"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Sélectionnez l'état</label>
+                                <select class="form-control" id="op-etat" name="etat">
+                                    <option>Normale</option>
+                                    <option>Urgente</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="submit" id="valider" class="btn btn-dark"> Valider</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Annuler</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End boîte de dialogue-->
+    </div>
+
+    <footer>
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+    </footer>
+</body>
+
+</html>
