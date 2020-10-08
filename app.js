@@ -25,10 +25,6 @@ $(document).ready(function () {
         //supprime la dernière tâche dans le textarea
         $('textarea[name="task"]').val(null);
 
-        for (i = 0; i < numberofItems.length; i++) {
-            return numberofItems;
-        }
-
     });
 
 
@@ -43,39 +39,50 @@ $(document).ready(function () {
     }
     checked();
 
+    const pagination = () => {
+        // Pagination
+        // ----------------------------------------------------------
+        var numberofItems = $('.list-group-item').length;
+        var limitPerPage = 4;
+        var totalPages = Math.round(numberofItems / limitPerPage);
+        
+        $('#page .list-group-item').slice(limitPerPage).hide();
 
-    // Pagination
-    // ----------------------------------------------------------
-    var numberofItems = $('.list-group-item').length;
-    var limitPerPage = 4;
-    var totalPages = Math.round(numberofItems / limitPerPage);
+        $(".pagination").append('<li class="page-item current-page active"><a class="page-link" href="javascript:void(0)">' + 1 + '</a></li>');
     
-    $('#page .list-group-item').slice(limitPerPage).hide();
-    $(".pagination").append('<li class="page-item current-page active"><a class="page-link" href="javascript:void(0)">' + 1 + '</a></li>');
-
-    for (var i = 2; i <= totalPages; i++) {
-        $(".pagination").append('<li class="page-item current-page"><a class="page-link" href="#">' + i + '</a></li>'); // Insert page number into pagination tabs
-    };
-
-    $(".pagination li.current-page").on("click", function () {
-        // Check if page number that was clicked on is the current page that is being displayed
-        if ($(this).hasClass('active')) {
-            return false; // Return false (i.e., nothing to do, since user clicked on the page number that is already being displayed)
-        } else {
-            var currentPage = $(this).index() + 1; // Get current page number
-
-            $(".pagination li").removeClass('active'); // Remove the 'active' class status from the page that is currently being displayed
-            $(this).addClass('active'); // Add the 'active' class status to the page that was clicked on
-            $("#page .list-group-item").hide(); // Hide all items in loop, this case, all the list groups
-
-            var grandTotal = limitPerPage * currentPage; // Get the total number of items up to the page number that was clicked on
-
-            // Loop through total items, selecting a new set of items based on page number
-            for (var i = grandTotal - limitPerPage; i < grandTotal; i++) {
-                $("#page .list-group-item:eq(" + i + ")").show(); // Show items from the new page that was selected
+        for (var i = 2; i <= totalPages; i++) {
+            $(".pagination").append('<li class="page-item current-page"><a class="page-link" href="#">' + i + '</a></li>'); // Insert page number into pagination tabs
+        };
+    
+        $(".pagination li.current-page").on("click", function () {
+            // Check if page number that was clicked on is the current page that is being displayed
+            if ($(this).hasClass('active')) {
+                return false; // Return false (i.e., nothing to do, since user clicked on the page number that is already being displayed)
+            } else {
+                var currentPage = $(this).index() + 1; // Get current page number
+    
+                console.log(currentPage);
+    
+                $(".pagination li").removeClass('active'); // Remove the 'active' class status from the page that is currently being displayed
+                $(this).addClass('active'); // Add the 'active' class status to the page that was clicked on
+                $("#page .list-group-item").hide(); // Hide all items in loop, this case, all the list groups
+    
+                var grandTotal = limitPerPage * currentPage; // Get the total number of items up to the page number that was clicked on
+    
+                // Loop through total items, selecting a new set of items based on page number
+                for (var i = grandTotal - limitPerPage; i < grandTotal; i++) {
+                    $("#page .list-group-item:eq(" + i + ")").show(); // Show items from the new page that was selected
+                }
             }
-        }
+    
+        });
+    }
 
-    });
+    pagination();
+
+    $valider.click(() => {
+        $(".pagination").empty();
+        pagination();
+    })
 
 });
