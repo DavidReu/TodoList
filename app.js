@@ -48,10 +48,9 @@ $(document).ready(function () {
     // ----------------------------------------------------------
     var numberofItems = $('.list-group-item').length;
     var limitPerPage = 4;
-    $('#page .list-group-item').slice(limitPerPage).hide();
     var totalPages = Math.round(numberofItems / limitPerPage);
-    console.log(totalPages);
-    console.log(numberofItems);
+    
+    $('#page .list-group-item').slice(limitPerPage).hide();
     $(".pagination").append('<li class="page-item current-page active"><a class="page-link" href="javascript:void(0)">' + 1 + '</a></li>');
 
     for (var i = 2; i <= totalPages; i++) {
@@ -63,12 +62,13 @@ $(document).ready(function () {
         if ($(this).hasClass('active')) {
             return false; // Return false (i.e., nothing to do, since user clicked on the page number that is already being displayed)
         } else {
-            var currentPage = $(this).index(); // Get the current page number
+            var currentPage = $(this).index() + 1; // Get current page number
+
             $(".pagination li").removeClass('active'); // Remove the 'active' class status from the page that is currently being displayed
             $(this).addClass('active'); // Add the 'active' class status to the page that was clicked on
             $("#page .list-group-item").hide(); // Hide all items in loop, this case, all the list groups
+
             var grandTotal = limitPerPage * currentPage; // Get the total number of items up to the page number that was clicked on
-            console.log(grandTotal);
 
             // Loop through total items, selecting a new set of items based on page number
             for (var i = grandTotal - limitPerPage; i < grandTotal; i++) {
